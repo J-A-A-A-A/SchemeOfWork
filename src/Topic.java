@@ -4,8 +4,9 @@ import java.util.ArrayList;
 public class Topic {
     private int yearGroup;
     private String subject;
-    private int number;
+    private int number  ;
     private String name;
+    private ArrayList<SubTopic> subTopics;
 
     //Constructor
     public Topic(int yearGroup, String subject, int number, String name) {

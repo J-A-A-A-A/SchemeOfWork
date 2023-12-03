@@ -11,17 +11,17 @@ public class SubTopic {
     }
     //Getter
     public int getNumber() {
-        return number;
+        return this.number;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     // TODO: Get a lesson using its name or number
-    public Lesson getLesson(String name){
-        for (int x = 0; x > lessons.size(); x++){
-            if (lessons.get(x).getName() == name){
+    public Lesson getLesson(int  number){
+        for (int x = 0; x > this.lessons.size(); x++){
+            if (lessons.get(x).getNumber() == number){
                 return lessons.get(x);
             }
         }
@@ -31,6 +31,6 @@ public class SubTopic {
     //TODO: Add lessons to a subtopic
 
     public void addLesson(Lesson newLesson){
-        lessons.add(newLesson);
+        this.lessons.add(newLesson);
     }
 }

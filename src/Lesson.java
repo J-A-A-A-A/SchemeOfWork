@@ -2,53 +2,33 @@ import java.util.ArrayList;
 
 public class Lesson {
     private int number;
-    private String subject;
-    private String name;
+    private String date;
     private String learningObjective;
     private ArrayList<String> content;
     private ArrayList<String> resources;
     private ArrayList<String> successCriteria;
-    private boolean completed;
+    private boolean completed = false;
 
 
     // Constructor
-    public Lesson(int number, String subject, String name, String learningObjective, ArrayList<String> content, ArrayList<String> resources, ArrayList<String> successCriteria) {
+    public Lesson(int number, String learningObjective, ArrayList<String> content, ArrayList<String> resources, ArrayList<String> successCriteria) {
         this.number = number;
-        this.subject = subject;
-        this.name = name;
         this.learningObjective = learningObjective;
         this.content = content;
         this.resources = resources;
         this.successCriteria = successCriteria;
-        completed = false;
+    }
+
+    public int getNumber(){
+        return this.number;
+    }
+
+    public void setDate(String date){
+        this.date = date;
     }
 
     //Getters
-    public int getNumber() {
-        return number;
-    }
+    // TODO: Method for setting the date of each lesson
 
-    public String getName() {
-        return name;
-    }
 
-    public String getLearningObjective() {
-        return learningObjective;
-    }
-
-    public ArrayList<String> getContent() {
-        return content;
-    }
-
-    public ArrayList<String> getResources() {
-        return resources;
-    }
-
-    public ArrayList<String> getSuccessCriteria() {
-        return successCriteria;
-    }
-
-    public boolean isCompleted() {
-        return completed;
-    }
 }

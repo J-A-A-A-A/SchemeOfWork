@@ -1,5 +1,8 @@
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -15,5 +18,12 @@ public class Main {
         System.out.println("Topic Name: ");
         currentTopic.setName(scanner.nextLine());
         FileHandler.writeToFile("listOfTopics.txt",currentTopic.getName()+".txt",true);
+
+
+
+
+
     }
+
+
 }
