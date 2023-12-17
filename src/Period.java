@@ -1,16 +1,17 @@
 public class Period {
-    private int number;
-
     private String dayOfWeek;
-
-    private String weekNo ;
-
+    private int number;
+    private int year;
+    private String subject;
+    private String classCode;
     private Lesson lesson;
 
-    public Period(int number, String dayOfWeek,  String weekNo) {
-        this.number = number;
-        this.weekNo = weekNo;
+    public Period(String dayOfWeek, int number, int year, String subject, String classCode) {
         this.dayOfWeek = dayOfWeek;
+        this.number = number;
+        this.year = year;
+        this.subject = subject;
+        this.classCode = classCode;
     }
 
     // TODO: Assign a lesson to one of the periods
@@ -22,5 +23,17 @@ public class Period {
     public void setPeriod(int periodNumber, String date){
         this.number = periodNumber;
         this.lesson.setDate(date);
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public String getClassCode() {
+        return classCode;
     }
 }
